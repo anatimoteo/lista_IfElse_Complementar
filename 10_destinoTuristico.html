@@ -1,30 +1,36 @@
 <meta charset="UTF-8" />
 <script>
-    // Problema: Aviso sobre temperaturas
+    // Problema: Destino turístico
     /*
-    Faça um script que peça para o usuário informar o valor de uma temperatura em graus Celsius. 
-    - Caso a temperatura esteja abaixo de 100 graus Celsius, o programa deverá apresentar a mensagem "Está muito baixa!";
-    - Caso a temperatura esteja até 200 graus Celsius (inclusive), deverá apresentar a mensagem "Está baixa!";
-    - Se estiver acima de 200 graus Celsius e inferior a 500 graus Celsius, deverá apresentar a mensagem "Está normal!";
-    - Contudo, caso esteja acima de 500 graus Celsius, deverá apresentar a mensagem "Está muito alta!".
+    Peça para o usuário informar o preço do transporte aéreo para dois destinos de viagem (São Paulo, Rio de Janeiro).
+    
+    Peça também para informar o preço do hotel para os dois destinos (São Paulo, Rio de Janeiro) e quantos dias pretende ficar no destino.
+    
+    Calcule o custo final para cada um e apresente a melhor decisão, considerando que o destino pretendido será o com custo final mais baixo. 
+    
+    Apresente o destino final e o custo final da viagem para o destino.
     */
-   
-    const temperatura = Number(prompt(`Informe o valor de uma temperatura em graus celsius`).trim().replace(",", "."));
 
-    if (temperatura < 100) {
-        alert(`Está muito baixa!`)
+    // Entrada
+
+    const transporteSp = Number(prompt(`Informe o preço do transporte da viagem para São Paulo:`).trim().replace(",", "."));
+    const transporteRj = Number(prompt(`Informe o preço do transporte da viagem para Rio de Janeiro:`).trim().replace(",", "."));
+    const hotelSp = Number(prompt(`Informe o preço do hotel da viagem para São Paulo:`).trim().replace(",", "."));
+    const hotelRj = Number(prompt(`Informe o preço do hotel da viagem para Rio de Janeiro:`).trim().replace(",", "."));
+    const dias = Number(prompt(`Informe quantos dias pretende ficar na viagem:`).trim().replace(",", "."));
+
+    // Processamento
+
+    const viagemSp = (transporteSp + (hotelSp * dias));
+    const viagemRj = (transporteRj + (hotelRj * dias));
+
+    // Saída
+
+    if (viagemRj > viagemSp) {
+        alert(`A viagem para São Paulo é mais barata.`);
     }
-
-    if (temperatura <= 200) {
-        alert(`Está baixa!`)
-    }
-
-    if (temperatura > 200 && temperatura < 500) {
-        alert(`Está normal!`)
-    }
-
     else {
-        alert(`Está muito alta!`)
+        alert(`A viagem para o Rio de Janeiro é mais barata`);
     }
 
 </script>

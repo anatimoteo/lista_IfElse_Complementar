@@ -12,7 +12,7 @@
     */
 
     const valorComputador = Number(prompt(`Informe o valor do computador:`).trim().replace(",", "."));
-    const pagamento = prompt(`Informe a forma de pagamento: sendo B-boleto, D-dinheiro e P-pix`).trim().toLocaleLowerCase();
+    const pagamento = prompt(`Informe a forma de pagamento: sendo B-boleto, D-dinheiro e P-pix`).trim().toLowerCase();
 
     if (pagamento === 'b') {
         const precoDesconto1 = valorComputador - (valorComputador * 0.03);

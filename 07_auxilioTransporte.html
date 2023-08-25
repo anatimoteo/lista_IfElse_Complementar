@@ -22,17 +22,17 @@
         if (transporteproprio == "S" || transporteproprio == "N") {
             const desconto = ((salario * 6) / 100);
             salario = salario - desconto;
-            document.write(`O desconto será de R$${desconto} e o salário final seŕa de R$${salario}.`)
+            alert(`O desconto será de R$${desconto} e o salário final seŕa de R$${salario}.`)
         }
     } else if (auxiliotransporte == "N") {
 
         if (transporteproprio == "S" && auxiliotransporte == "N") {
             salario = salario + 200;
-            document.write(`O aumento foi de R$200 e o salário final será de R$${salario}.`)
+            alert(`O aumento foi de R$200 e o salário final será de R$${salario}.`)
         }
         else if (transporteproprio == "N" && auxiliotransporte == "N") {
             salario = salario + 150;
-            document.write(`O aumento foi de R$150 e o salário final será de R$${salario}.`)
+            alert(`O aumento foi de R$150 e o salário final será de R$${salario}.`)
         }
     } else {
         alert("Algo deu errado, tente novamente!")

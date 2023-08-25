@@ -14,26 +14,26 @@
     */
 
     const salario = Number(prompt(`Insira o seu salário atual`).trim().replace(",", "."));
-    var salarioAposReajuste = 0;
+    let reajuste = 0;
 
     if (salario <= 2000 && salario<=2000) { 
-        salarioAposReajuste = salario + (salario * 15 / 100)
-        alert(`O salário final será de R$${salarioAposReajuste.toFixed(3).replace(",", ".")}`)
+        reajuste = salario + (salario * 15 / 100)
+        alert(`O salário final será de R$${reajuste.toFixed(3).replace(",", ".")}`)
     }
     else if (salario > 2000 && salario <= 4000) {
-        salarioAposReajuste = salario + (salario * 10 / 100)
-        alert(`O salário final será de R$${salarioAposReajuste.toFixed(3).replace(",", ".")}`)
+        reajuste = salario + (salario * 10 / 100)
+        alert(`O salário final será de R$${reajuste.toFixed(3).replace(",", ".")}`)
     }
     else if (salario > 4000 && salario <= 7000) {
-        salarioAposReajuste = salario + (salario * 7.5 / 100)
-        alert(`O salário final será de R$${salarioAposReajuste.toFixed(3).replace(",", ".")}`)
+        reajuste = salario + (salario * 7.5 / 100)
+        alert(`O salário final será de R$${reajuste.toFixed(3).replace(",", ".")}`)
     }
     else if (salario > 7000) {
-        salarioAposReajuste = salario + (salario * 5 / 100)
-        alert(`O salário final será de R$${salarioAposReajuste.toFixed(3).replace(",", ".")}`)
+        reajuste = salario + (salario * 5 / 100)
+        alert(`O salário final será de R$${reajuste.toFixed(3).replace(",", ".")}`)
     }
     else (
-        alert(`Termo inválido`)
+        alert(`Algo deu errado, tente novamente!`)
     )
 
 </script>

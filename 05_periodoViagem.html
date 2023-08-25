@@ -11,9 +11,8 @@
     */
 
     const distancia = Number(prompt(`Insira a distância da viagem em quilômetros`));
-    const quilometrosPorDia = Number(prompt(`Insira a quantidade de quilômetros que pretende viajar por dia`));
-
-    const diasViagem = Math.round(distancia / quilometrosPorDia);
+    const kmDia = Number(prompt(`Insira a quantidade de quilômetros que pretende viajar por dia`));
+    const diasViagem = Math.round(distancia / kmDia);
 
     if (diasViagem <= 3) {
         alert(`A duração da viagem será ${diasViagem} dias e você poderá realizar ela em qualquer período.`);
